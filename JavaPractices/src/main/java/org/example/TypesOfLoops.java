@@ -63,6 +63,37 @@ public class TypesOfLoops {
         System.out.println("Summation of Odd number is:"+odd);
     }
 
+
+    public void forEachLoop(){
+        System.out.println("\n");
+        System.out.println("print Name is:" );
+        String[] names = {"joy","Ripa","Sabuj","Nirob"};
+
+        for(String N:names){
+            System.out.println(N);
+        }
+
+        System.out.println("\n");
+        System.out.println("print Character is:" );
+
+        char[] Ch = {'A','B','C','E','F'};
+        for(char C:Ch){
+            System.out.println(C);
+        }
+
+        System.out.println("\n");
+        System.out.println("print Number is:" );
+
+        int[] num = {10,20,21,23};
+        for(int s:num){
+            System.out.println(s);
+        }
+
+
+    }
+
+
+
     public static void main(String[] args) {
         int num1 , num2;
         Scanner  scanner = new Scanner(System.in);
@@ -70,10 +101,10 @@ public class TypesOfLoops {
         num1 = scanner.nextInt();
         System.out.println("The number is:"+num1);
 
-
         System.out.print("Enter integer  number2 :");
         num2 = scanner.nextInt();
         System.out.println("The number is:"+num2);
+
 
 
         TypesOfLoops obj = new TypesOfLoops();
@@ -81,6 +112,7 @@ public class TypesOfLoops {
         obj.ForLoop(num1);
         obj.WhileLoop(num2);
         obj.DoWhileLoop(num2);
+        obj.forEachLoop();
 
     }
 }

@@ -46,6 +46,32 @@ public class DigitReversalProgram {
         return rev;
     }
 
+    public void SumDigit(int num ,int rev){
+        int digit=0;
+        int sum=0;
+        while(num!=0){
+            digit=num%10;
+            sum= sum+digit;// sum digits
+            rev=rev*10+digit;   //reverse number (num%10 == digit)
+            num=num/10;
+        }
+
+        System.out.println("Summation of digit:"+sum);
+        System.out.println("Reverse Digit:"+rev);
+
+        int Rev=rev;
+        int DigitRev=0;
+        int sumdigit=0;
+        while(Rev!=0){
+            DigitRev = Rev%10;
+            sumdigit+=DigitRev;
+            Rev/=10;
+        }
+
+        System.out.println("Summation of reversDigits:"+sumdigit);
+    }
+
+
     public static void main(String[] args) {
         int num;
         int rev=0;
@@ -58,6 +84,6 @@ public class DigitReversalProgram {
         obj.ReversesWhile(num,rev);
         obj.ReversesDoWhile(num,rev);
         System.out.println(" useing return function call Reversed with Do-While Loop: " + obj.ReversesReturn(num));
-         
+         obj.SumDigit(num,rev);
     }
 }
